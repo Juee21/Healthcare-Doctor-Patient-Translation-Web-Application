@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import uuid
 
-BACKEND_URL = "http://localhost:8000"
+BACKEND_URL = "https://healthcare-doctor-patient-translation-97t1.onrender.com"
 
 st.set_page_config(page_title="Doctor–Patient Translator", layout="centered")
 
