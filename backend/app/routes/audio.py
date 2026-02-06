@@ -1,12 +1,15 @@
 from fastapi import APIRouter, UploadFile
 import openai
 import tempfile
+import os
 
 router = APIRouter()
 
 @router.post("/audio/upload")
 async def upload_audio(file: UploadFile):
-    with tempfile.NamedTemporaryFile(delete=False) as temp:
+    suffix = os.path.splitext(file.filename)[-1]
+
+    with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as temp:
         temp.write(await file.read())
         temp_path = temp.name
 
