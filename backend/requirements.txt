@@ -3,6 +3,8 @@ uvicorn
 python-dotenv
 sqlalchemy
 psycopg2-binary
-openai
+openai==0.28.1
 python-multipart
 pydantic
+streamlit 
+requests
